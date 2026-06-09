@@ -271,7 +271,7 @@ function App() {
               </div>
               <div className="stat-item">
                 <div className="stat-number">Active</div>
-                <div className="stat-label">CodeChef</div>
+                <div className="stat-label">CodeChef & HackerRank</div>
               </div>
             </div>
 
@@ -330,7 +330,7 @@ function App() {
               </p>
               
               <div className="edu-meta">
-                2021 - 2023 | Vijayawada, AP
+                Vijayawada, AP
               </div>
               
               <div className="edu-divider"></div>
@@ -685,14 +685,13 @@ function App() {
           <div className="section-header">
             <h2>Coding Profiles</h2>
           </div>
-          <div className="platform-grid" style={{ display: 'flex', justifyContent: 'center' }}>
+          <div className="platform-grid">
             {/* Codechef */}
             <a 
               href="https://www.codechef.com/users/klu_2300090355" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="platform-card platform-card-codechef"
-              style={{ width: '100%', maxWidth: '500px' }}
             >
               <div className="platform-left">
                 <span className="platform-badge">CodeChef</span>
@@ -702,6 +701,25 @@ function App() {
               <div className="platform-right">
                 <span className="platform-stat-number">1 Star</span>
                 <span className="platform-stat-label">Current Rating</span>
+              </div>
+            </a>
+
+            {/* Hackerrank */}
+            <a 
+              href="https://www.hackerrank.com/profile/klu2300090355" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="platform-card platform-card-hackerrank"
+              style={{ background: 'linear-gradient(135deg, #2ec866 0%, #1ba04c 100%)', boxShadow: '0 10px 20px rgba(46, 200, 102, 0.2)' }}
+            >
+              <div className="platform-left">
+                <span className="platform-badge">HackerRank</span>
+                <span className="platform-name">HackerRank Profile</span>
+                <span className="platform-meta">Algorithms, data structures & sql coding</span>
+              </div>
+              <div className="platform-right">
+                <span className="platform-stat-number">Active</span>
+                <span className="platform-stat-label">Problem Solving</span>
               </div>
             </a>
           </div>
@@ -799,16 +817,23 @@ function App() {
             <div className="footer-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
               <span className="footer-name">RENDLA PAVITHRA</span>
               <div className="footer-socials" style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="GitHub" style={{ color: 'var(--text-muted)', transition: 'color 0.2s' }}>
+                <a href="https://github.com/pavithrarendla" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="GitHub" style={{ color: 'var(--text-muted)', transition: 'color 0.2s' }}>
                   <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                   </svg>
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="LinkedIn" style={{ color: 'var(--text-muted)', transition: 'color 0.2s' }}>
+                <a href="https://linkedin.com/in/pavithrarendla" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="LinkedIn" style={{ color: 'var(--text-muted)', transition: 'color 0.2s' }}>
                   <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                     <rect x="2" y="9" width="4" height="12"></rect>
                     <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Instagram" style={{ color: 'var(--text-muted)', transition: 'color 0.2s' }}>
+                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                   </svg>
                 </a>
               </div>
