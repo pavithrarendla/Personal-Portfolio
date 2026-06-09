@@ -348,6 +348,61 @@ function App() {
             <h2>Skills & Technologies</h2>
           </div>
           
+          {/* GitHub-style Languages Card */}
+          <div className="github-skills-card animate-fade-in">
+            <div className="github-card-header">
+              <div className="github-card-title-box">
+                <svg className="github-repo-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                  <path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8z"></path>
+                </svg>
+                <span className="github-repo-name">pavithrarendla / skills-distribution</span>
+              </div>
+              <span className="github-public-badge">Public</span>
+            </div>
+            
+            <div className="github-languages-bar">
+              <div className="lang-segment" style={{ width: '35.5%', backgroundColor: '#b07219' }} title="Java: 35.5%"></div>
+              <div className="lang-segment" style={{ width: '25.0%', backgroundColor: '#f1e05a' }} title="JavaScript & React: 25.0%"></div>
+              <div className="lang-segment" style={{ width: '15.0%', backgroundColor: '#6db33f' }} title="Spring Boot: 15.0%"></div>
+              <div className="lang-segment" style={{ width: '12.5%', backgroundColor: '#ff9900' }} title="AWS & Cloud: 12.5%"></div>
+              <div className="lang-segment" style={{ width: '7.0%', backgroundColor: '#e38c00' }} title="SQL & Databases: 7.0%"></div>
+              <div className="lang-segment" style={{ width: '5.0%', backgroundColor: 'var(--text-muted)' }} title="DevOps & Tools: 5.0%"></div>
+            </div>
+            
+            <div className="github-languages-legend">
+              <div className="legend-item">
+                <span className="legend-dot" style={{ backgroundColor: '#b07219' }}></span>
+                <span className="legend-name">Java</span>
+                <span className="legend-percent">35.5%</span>
+              </div>
+              <div className="legend-item">
+                <span className="legend-dot" style={{ backgroundColor: '#f1e05a' }}></span>
+                <span className="legend-name">JavaScript & React</span>
+                <span className="legend-percent">25.0%</span>
+              </div>
+              <div className="legend-item">
+                <span className="legend-dot" style={{ backgroundColor: '#6db33f' }}></span>
+                <span className="legend-name">Spring Boot</span>
+                <span className="legend-percent">15.0%</span>
+              </div>
+              <div className="legend-item">
+                <span className="legend-dot" style={{ backgroundColor: '#ff9900' }}></span>
+                <span className="legend-name">AWS & Cloud</span>
+                <span className="legend-percent">12.5%</span>
+              </div>
+              <div className="legend-item">
+                <span className="legend-dot" style={{ backgroundColor: '#e38c00' }}></span>
+                <span className="legend-name">SQL & Databases</span>
+                <span className="legend-percent">7.0%</span>
+              </div>
+              <div className="legend-item">
+                <span className="legend-dot" style={{ backgroundColor: 'var(--text-muted)' }}></span>
+                <span className="legend-name">DevOps & Tools</span>
+                <span className="legend-percent">5.0%</span>
+              </div>
+            </div>
+          </div>
+          
           <div className="grid-3">
             {/* Category 1: Cloud & DevOps */}
             <div className="skills-category">
@@ -592,8 +647,11 @@ function App() {
           <div className="grid-4">
             {/* Cert 1 */}
             <a href="https://www.credly.com/badges/fcb1ee59-28bd-4b4b-8e0a-eb68fa5f0bf3/public_url" target="_blank" rel="noopener noreferrer" className="cert-card">
-              <div className="cert-icon-box">
-                <Award />
+              <div className="cert-icon-box" style={{ color: '#ff9900', backgroundColor: 'rgba(255, 153, 0, 0.1)', borderColor: 'rgba(255, 153, 0, 0.2)' }}>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a6 6 0 0 0 0-12z" />
+                  <path d="M7 16c2 2 5.5 2 8 0" stroke="#ff9900" />
+                </svg>
               </div>
               <div className="cert-info">
                 <h4 className="cert-name">AWS Certified Cloud Practitioner</h4>
@@ -603,8 +661,11 @@ function App() {
 
             {/* Cert 2 */}
             <a href="https://www.credly.com/badges/4f423290-529f-4b13-a449-d11d95e1b993/public_url" target="_blank" rel="noopener noreferrer" className="cert-card">
-              <div className="cert-icon-box">
-                <Award />
+              <div className="cert-icon-box" style={{ color: '#10b981', backgroundColor: 'rgba(16, 185, 129, 0.1)', borderColor: 'rgba(16, 185, 129, 0.2)' }}>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2c0 0-5 4.5-5 9.5 0 2.5 2 4.5 5 4.5s5-2 5-4.5C17 6.5 12 2 12 2z" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" />
+                  <path d="M12 2v19" stroke="#10b981" />
+                </svg>
               </div>
               <div className="cert-info">
                 <h4 className="cert-name">MongoDB Certified Developer</h4>
@@ -614,8 +675,12 @@ function App() {
 
             {/* Cert 3 */}
             <a href="https://www.credly.com/badges/ee0bc189-f1ef-4046-8228-5671073f1c39/public_url" target="_blank" rel="noopener noreferrer" className="cert-card">
-              <div className="cert-icon-box">
-                <Award />
+              <div className="cert-icon-box" style={{ color: '#0089d6', backgroundColor: 'rgba(0, 137, 214, 0.1)', borderColor: 'rgba(0, 137, 214, 0.2)' }}>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M6 18L12 4l6 14H6z" fill="rgba(0, 137, 214, 0.2)" stroke="#0089d6" />
+                  <path d="M12 4v14" stroke="#0089d6" />
+                  <path d="M9 11h6" stroke="#0089d6" />
+                </svg>
               </div>
               <div className="cert-info">
                 <h4 className="cert-name">Microsoft Azure (AZ-900)</h4>
@@ -625,8 +690,10 @@ function App() {
 
             {/* Cert 4 */}
             <div className="cert-card">
-              <div className="cert-icon-box">
-                <Award />
+              <div className="cert-icon-box" style={{ color: '#00a1e0', backgroundColor: 'rgba(0, 161, 224, 0.1)', borderColor: 'rgba(0, 161, 224, 0.2)' }}>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M19.5 9.5c.3-1.9-1-3.8-3-4.2-2.2-.4-4.3.7-4.9 2.8-.8-1-2.2-1.5-3.5-1.2-1.6.4-2.8 1.9-2.8 3.6-.9-.4-1.9-.3-2.7.2-1.1.8-1.6 2.3-1.2 3.6.4 1.1 1.5 1.7 2.7 1.7h14c1.9 0 3.5-1.6 3.5-3.5 0-1.6-1.1-3-2.6-3.3z" fill="rgba(0, 161, 224, 0.2)" stroke="#00a1e0" />
+                </svg>
               </div>
               <div className="cert-info">
                 <h4 className="cert-name">Salesforce Certified Associate</h4>
@@ -636,8 +703,11 @@ function App() {
 
             {/* Cert 5 */}
             <div className="cert-card">
-              <div className="cert-icon-box">
-                <Award />
+              <div className="cert-icon-box" style={{ color: '#0d2b4b', backgroundColor: 'rgba(13, 43, 75, 0.1)', borderColor: 'rgba(13, 43, 75, 0.2)' }}>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="rgba(13, 43, 75, 0.2)" stroke="#0d2b4b" />
+                  <path d="M12 8v8M9 11h6" stroke="#0d2b4b" />
+                </svg>
               </div>
               <div className="cert-info">
                 <h4 className="cert-name">Linguaskills</h4>
@@ -647,8 +717,12 @@ function App() {
 
             {/* Cert 6 */}
             <a href="https://www.linkedin.com/feed/update/urn:li:activity:7305616681974861824/" target="_blank" rel="noopener noreferrer" className="cert-card">
-              <div className="cert-icon-box">
-                <Award />
+              <div className="cert-icon-box" style={{ color: '#f07121', backgroundColor: 'rgba(240, 113, 33, 0.1)', borderColor: 'rgba(240, 113, 33, 0.2)' }}>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="11" width="18" height="10" rx="2" fill="rgba(240, 113, 33, 0.2)" stroke="#f07121" />
+                  <circle cx="12" cy="5" r="2" stroke="#f07121" />
+                  <path d="M12 7v4M8 15h.01M16 15h.01" stroke="#f07121" />
+                </svg>
               </div>
               <div className="cert-info">
                 <h4 className="cert-name">Automation Anywhere RPA</h4>
@@ -658,8 +732,12 @@ function App() {
 
             {/* Cert 7 */}
             <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=6548A550C245061D370EC41B561B45215F1A534C7F441A996F53EE2C2813F0FF" target="_blank" rel="noopener noreferrer" className="cert-card">
-              <div className="cert-icon-box">
-                <Award />
+              <div className="cert-icon-box" style={{ color: '#e62828', backgroundColor: 'rgba(230, 40, 40, 0.1)', borderColor: 'rgba(230, 40, 40, 0.2)' }}>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1" stroke="#e62828" />
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" fill="rgba(230, 40, 40, 0.2)" stroke="#e62828" />
+                  <path d="M6 2c0 2-2 2-2 4M10 2c0 2-2 2-2 4M14 2c0 2-2 2-2 4" stroke="#e62828" />
+                </svg>
               </div>
               <div className="cert-info">
                 <h4 className="cert-name">Java Programmer Certification</h4>
@@ -669,8 +747,13 @@ function App() {
 
             {/* Cert 8 */}
             <div className="cert-card">
-              <div className="cert-icon-box">
-                <Award />
+              <div className="cert-icon-box" style={{ color: '#a855f7', backgroundColor: 'rgba(168, 85, 247, 0.1)', borderColor: 'rgba(168, 85, 247, 0.2)' }}>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="5" r="3" fill="rgba(168, 85, 247, 0.2)" stroke="#a855f7" />
+                  <circle cx="5" cy="18" r="3" fill="rgba(168, 85, 247, 0.2)" stroke="#a855f7" />
+                  <circle cx="19" cy="18" r="3" fill="rgba(168, 85, 247, 0.2)" stroke="#a855f7" />
+                  <path d="M10 7.5L6.5 15.5M14 7.5l3.5 8M8 18h8" stroke="#a855f7" />
+                </svg>
               </div>
               <div className="cert-info">
                 <h4 className="cert-name">Graph Theory</h4>
