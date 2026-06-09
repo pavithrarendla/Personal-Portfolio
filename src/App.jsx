@@ -402,62 +402,10 @@ function App() {
               </div>
             </div>
           </div>
-          {/* Interactive Skills Dashboard (Doughnut & Radar) */}
-          <div className="skills-dashboard animate-fade-in">
-            {/* Left Card: Skills Distribution Doughnut */}
-            <div className="dashboard-card">
-              <h3 className="dashboard-card-title">Skill Pillars</h3>
-              <p className="dashboard-card-subtitle">General distribution of core tech domains</p>
-              
-              <div className="chart-wrapper">
-                <div className="doughnut-layout">
-                  <div className="doughnut-chart-box">
-                    <svg viewBox="0 0 200 200" width="160" height="160">
-                      {/* Gray background track */}
-                      <circle cx="100" cy="100" r="70" fill="transparent" stroke="var(--border-color)" strokeWidth="14" />
-                      
-                      {/* Segments (circumference is 439.82) */}
-                      {/* Segment 1: Java & Backend (45%) -> strokeDasharray="197.9 439.82" offset="0" */}
-                      <circle cx="100" cy="100" r="70" fill="transparent" stroke="#3b82f6" strokeWidth="14"
-                              strokeDasharray="197.9 439.82" strokeDashoffset="0" transform="rotate(-90 100 100)" strokeLinecap="round" />
-                      
-                      {/* Segment 2: Cloud & DevOps (35%) -> strokeDasharray="153.9 439.82" offset="-197.9" */}
-                      <circle cx="100" cy="100" r="70" fill="transparent" stroke="#10b981" strokeWidth="14"
-                              strokeDasharray="153.9 439.82" strokeDashoffset="-197.9" transform="rotate(-90 100 100)" strokeLinecap="round" />
-                      
-                      {/* Segment 3: Frontend & DBs (20%) -> strokeDasharray="88.0 439.82" offset="-351.8" */}
-                      <circle cx="100" cy="100" r="70" fill="transparent" stroke="#a855f7" strokeWidth="14"
-                              strokeDasharray="88.0 439.82" strokeDashoffset="-351.8" transform="rotate(-90 100 100)" strokeLinecap="round" />
-                    </svg>
-                    <div className="doughnut-center-text">
-                      <span className="doughnut-number">12</span>
-                      <span className="doughnut-label">Tech Tools</span>
-                    </div>
-                  </div>
-                  
-                  <div className="doughnut-legend">
-                    <div className="doughnut-legend-item">
-                      <span className="doughnut-legend-dot" style={{ backgroundColor: '#3b82f6' }}></span>
-                      <span className="doughnut-legend-name">Backend</span>
-                      <span className="doughnut-legend-val">45%</span>
-                    </div>
-                    <div className="doughnut-legend-item">
-                      <span className="doughnut-legend-dot" style={{ backgroundColor: '#10b981' }}></span>
-                      <span className="doughnut-legend-name">Cloud/DevOps</span>
-                      <span className="doughnut-legend-val">35%</span>
-                    </div>
-                    <div className="doughnut-legend-item">
-                      <span className="doughnut-legend-dot" style={{ backgroundColor: '#a855f7' }}></span>
-                      <span className="doughnut-legend-name">Frontend/DBs</span>
-                      <span className="doughnut-legend-val">20%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
+          {/* Interactive Skills Dashboard (Radar) */}
+          <div className="skills-dashboard animate-fade-in" style={{ display: 'flex', justifyContent: 'center' }}>
             {/* Right Card: Proficiency Map Radar */}
-            <div className="dashboard-card">
+            <div className="dashboard-card" style={{ width: '100%', maxWidth: '600px' }}>
               <h3 className="dashboard-card-title">Proficiency Map</h3>
               <p className="dashboard-card-subtitle">Multi-dimensional rating across core capabilities</p>
               
