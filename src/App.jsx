@@ -687,22 +687,21 @@ function App() {
           </div>
           
           <div className="platform-grid">
-            {/* Hackerrank */}
+            {/* Leetcode */}
             <a 
-              href="https://hackerrank.com" 
+              href="https://leetcode.com/u/pavithrarendla/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="platform-card platform-card-hackerrank"
-              style={{ background: 'linear-gradient(135deg, #2ec866 0%, #1ba04c 100%)', boxShadow: '0 10px 20px rgba(46, 200, 102, 0.2)' }}
+              className="platform-card platform-card-leetcode"
             >
               <div className="platform-left">
-                <span className="platform-badge">HackerRank</span>
-                <span className="platform-name">HackerRank Profile</span>
-                <span className="platform-meta">Algorithms, data structures & sql coding</span>
+                <span className="platform-badge">LeetCode</span>
+                <span className="platform-name">LeetCode Profile</span>
+                <span className="platform-meta">Competitive programming & data structures</span>
               </div>
               <div className="platform-right">
-                <span className="platform-stat-number">Active</span>
-                <span className="platform-stat-label">Problem Solving</span>
+                <span className="platform-stat-number">300+</span>
+                <span className="platform-stat-label">Problems Solved</span>
               </div>
             </a>
 
