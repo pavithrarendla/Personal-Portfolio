@@ -5,9 +5,9 @@
   --font-mono: 'JetBrains Mono', monospace;
   
   /* Light Mode Colors */
-  --bg-app: #f8fafc;
-  --bg-card: #ffffff;
-  --bg-sidebar: #ffffff;
+  --bg-app: #f1f5f9;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-sidebar: rgba(255, 255, 255, 0.9);
   --bg-sidebar-active: #eff6ff;
   --border-color: #e2e8f0;
   --border-card-hover: rgba(59, 130, 246, 0.4);
@@ -23,8 +23,8 @@
   --btn-gradient: linear-gradient(135deg, #ff2a5f 0%, #ff007f 100%);
   --glow-color: rgba(59, 130, 246, 0.15);
   
-  --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-  --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.03), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  --card-shadow-hover: 0 20px 30px -5px rgba(59, 130, 246, 0.08), 0 0 15px rgba(59, 130, 246, 0.1);
   --sidebar-shadow: 4px 0 25px rgba(0, 0, 0, 0.03);
   
   --transition-speed: 0.3s;
@@ -32,9 +32,9 @@
 
 /* Dark Mode Colors */
 body.dark {
-  --bg-app: #0f172a;
-  --bg-card: #1e293b;
-  --bg-sidebar: #0f172a;
+  --bg-app: #080d16;
+  --bg-card: rgba(30, 41, 59, 0.75);
+  --bg-sidebar: rgba(15, 23, 42, 0.85);
   --bg-sidebar-active: #334155;
   --border-color: #334155;
   --border-card-hover: rgba(96, 165, 250, 0.6);
@@ -51,7 +51,7 @@ body.dark {
   --glow-color: rgba(96, 165, 250, 0.2);
   
   --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
-  --card-shadow-hover: 0 20px 30px -5px rgba(0, 0, 0, 0.45), 0 15px 15px -5px rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: 0 20px 30px -5px rgba(0, 0, 0, 0.5), 0 0 20px rgba(96, 165, 250, 0.15);
   --sidebar-shadow: 4px 0 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -74,6 +74,39 @@ body {
   overflow-x: hidden;
   transition: background-color var(--transition-speed), color var(--transition-speed);
   -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 10px;
+  border: 2px solid var(--bg-app);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+/* Glassmorphism Backdrop Blurs */
+.sidebar,
+.about-card,
+.education-card,
+.skills-category,
+.project-card,
+.cert-card,
+.github-skills-card,
+.dashboard-card {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 /* App Container Layout */
@@ -260,7 +293,7 @@ body {
   display: block;
   width: 60px;
   height: 4px;
-  background-color: var(--accent-color);
+  background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-secondary) 100%);
   margin-top: 12px;
   border-radius: 2px;
 }
