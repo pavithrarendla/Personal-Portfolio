@@ -349,52 +349,7 @@ function App() {
           </div>
           
 
-          {/* Interactive Skills Dashboard (Radar) */}
-          <div className="skills-dashboard animate-fade-in" style={{ display: 'flex', justifyContent: 'center' }}>
-            {/* Right Card: Proficiency Map Radar */}
-            <div className="dashboard-card" style={{ width: '100%', maxWidth: '600px' }}>
-              <h3 className="dashboard-card-title">Proficiency Map</h3>
-              <p className="dashboard-card-subtitle">Multi-dimensional rating across core capabilities</p>
-              
-              <div className="chart-wrapper">
-                <svg className="radar-chart-box" viewBox="0 0 300 280">
-                  {/* Concentric grid hexagons */}
-                  <polygon className="radar-grid-line" points="150,118.75 168.4,129.4 168.4,150.6 150,161.25 131.6,150.6 131.6,129.4" />
-                  <polygon className="radar-grid-line" points="150,97.5 186.8,118.75 186.8,161.25 150,182.5 113.2,161.25 113.2,118.75" />
-                  <polygon className="radar-grid-line" points="150,76.25 205.2,108.1 205.2,171.9 150,203.75 94.8,171.9 94.8,108.1" />
-                  <polygon className="radar-grid-line" points="150,55 223.6,97.5 223.6,182.5 150,225 76.4,182.5 76.4,97.5" />
-                  
-                  {/* Axes lines */}
-                  <line className="radar-axis-line" x1="150" y1="140" x2="150" y2="55" />
-                  <line className="radar-axis-line" x1="150" y1="140" x2="223.6" y2="97.5" />
-                  <line className="radar-axis-line" x1="150" y1="140" x2="223.6" y2="182.5" />
-                  <line className="radar-axis-line" x1="150" y1="140" x2="150" y2="225" />
-                  <line className="radar-axis-line" x1="150" y1="140" x2="76.4" y2="182.5" />
-                  <line className="radar-axis-line" x1="150" y1="140" x2="76.4" y2="97.5" />
-                  
-                  {/* Radar shape */}
-                  <polygon className="radar-poly-fill" points="150,63.5 212.6,103.9 208.9,174 150,212.3 94.8,171.9 87.4,103.9" />
-                  
-                  {/* Radar points */}
-                  <circle className="radar-point-node" cx="150" cy="63.5" />
-                  <circle className="radar-point-node" cx="212.6" cy="103.9" />
-                  <circle className="radar-point-node" cx="208.9" cy="174" />
-                  <circle className="radar-point-node" cx="150" cy="212.3" />
-                  <circle className="radar-point-node" cx="94.8" cy="171.9" />
-                  <circle className="radar-point-node" cx="87.4" cy="103.9" />
-                  
-                  {/* Labels */}
-                  <text className="radar-axis-text" x="150" y="40" textAnchor="middle">Java & OOPs</text>
-                  <text className="radar-axis-text" x="235" y="96" textAnchor="start">Cloud (AWS)</text>
-                  <text className="radar-axis-text" x="235" y="186" textAnchor="start">Databases</text>
-                  <text className="radar-axis-text" x="150" y="244" textAnchor="middle">Frontend</text>
-                  <text className="radar-axis-text" x="65" y="186" textAnchor="end">DevOps</text>
-                  <text className="radar-axis-text" x="65" y="96" textAnchor="end">Spring Boot</text>
-                </svg>
-              </div>
-            </div>
-          </div>
-          
+
           <div className="grid-3">
             {/* Category 1: Cloud & DevOps */}
             <div className="skills-category">
