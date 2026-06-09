@@ -524,11 +524,6 @@ function App() {
                   <span className="project-tag">Django</span>
                   <span className="project-tag">MySQL</span>
                 </div>
-                <div className="project-links">
-                  <a href="#projects" className="project-link project-link-primary">
-                    Code <ExternalLink size={14} />
-                  </a>
-                </div>
               </div>
             </div>
 
@@ -558,11 +553,6 @@ function App() {
                   <span className="project-tag">Fullstack</span>
                   <span className="project-tag">MySQL</span>
                 </div>
-                <div className="project-links">
-                  <a href="#projects" className="project-link project-link-primary">
-                    Code <ExternalLink size={14} />
-                  </a>
-                </div>
               </div>
             </div>
 
@@ -587,11 +577,6 @@ function App() {
                   <span className="project-tag">React.js</span>
                   <span className="project-tag">MERN Stack</span>
                   <span className="project-tag">MySQL</span>
-                </div>
-                <div className="project-links">
-                  <a href="#projects" className="project-link project-link-primary">
-                    Code <ExternalLink size={14} />
-                  </a>
                 </div>
               </div>
             </div>
@@ -734,7 +719,7 @@ function App() {
                 <span className="platform-meta">Algorithms & live contest rankings</span>
               </div>
               <div className="platform-right">
-                <span className="platform-stat-number">3 Star</span>
+                <span className="platform-stat-number">1 Star</span>
                 <span className="platform-stat-label">Current Rating</span>
               </div>
             </a>
