@@ -883,7 +883,7 @@ function App() {
                     <circle cx="4" cy="4" r="2"></circle>
                   </svg>
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Instagram" style={{ color: 'var(--text-muted)', transition: 'color 0.2s' }}>
+                <a href="https://instagram.com/pavithrarendla" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Instagram" style={{ color: 'var(--text-muted)', transition: 'color 0.2s' }}>
                   <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
