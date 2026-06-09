@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pavithra Rendla - Resume</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #000000;
+      --secondary-color: #333333;
+      --accent-color: #000000;
+      --text-color: #111111;
+      --border-color: #000000;
+      --font-family: 'Times New Roman', Times, serif; /* LaTeX style default */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      color: var(--text-color);
+      line-height: 1.35;
+      background-color: #f1f5f9;
+      padding: 40px 20px;
+    }
+
+    /* Print instruction banner */
+    .print-banner {
+      max-width: 800px;
+      margin: 0 auto 20px;
+      background-color: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .print-text h3 {
+      color: #1e40af;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .print-text p {
+      color: #1e3a8a;
+      font-size: 13px;
+    }
+
+    .print-btn {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: background-color 0.2s;
+    }
+
+    .print-btn:hover {
+      background-color: #1d4ed8;
+    }
+
+    /* Resume container */
+    .resume-page {
+      background-color: #ffffff;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 50px 45px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      min-height: 1040px;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: normal;
+      font-family: 'Times New Roman', Times, serif;
+      color: var(--primary-color);
+      margin-bottom: 5px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 12.5px;
+      color: var(--secondary-color);
+    }
+
+    .contact-info a {
+      color: var(--secondary-color);
+      text-decoration: underline;
+    }
+
+    /* Section Layout */
+    .section {
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: bold;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1px;
+      margin-bottom: 8px;
+    }
+
+    /* Education / Experience Items */
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .item-title {
+      font-size: 13px;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
+    .item-subtitle-tech {
+      font-size: 12px;
+      font-style: italic;
+      color: var(--secondary-color);
+    }
+
+    .item-date-loc {
+      font-size: 12px;
+      text-align: right;
+    }
+
+    .bullet-list {
+      font-size: 12px;
+      color: var(--text-color);
+      margin-left: 15px;
+      margin-top: 3px;
+      margin-bottom: 8px;
+    }
+
+    .bullet-list li {
+      margin-bottom: 2px;
+    }
+
+    /* Technical Skills */
+    .skills-list {
+      font-size: 12px;
+      margin-bottom: 5px;
+      line-height: 1.4;
+    }
+
+    .skills-list strong {
+      font-weight: bold;
+    }
+
+    /* Certifications */
+    .cert-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    .cert-name {
+      font-weight: bold;
+    }
+
+    .cert-issuer {
+      font-style: italic;
+      margin-left: 5px;
+    }
+
+    .cert-link {
+      font-size: 11.5px;
+      text-decoration: underline;
+      color: var(--secondary-color);
+    }
+
+    /* Extracurriculars */
+    .extra-item {
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+
+    .extra-title {
+      font-weight: bold;
+    }
+
+    .extra-desc {
+      margin-top: 1px;
+      color: var(--secondary-color);
+    }
+
+    /* Coding Platforms */
+    .platforms-row {
+      display: flex;
+      gap: 40px;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .platform-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+      }
+
+      .print-banner {
+        display: none;
+      }
+
+      .resume-page {
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Instructions Banner (Hidden during print) -->
+  <div class="print-banner">
+    <div class="print-text">
+      <h3>Print to PDF Resume</h3>
+      <p>Click "Print Resume" and choose "Save as PDF" to save your official resume document.</p>
+    </div>
+    <button class="print-btn" onclick="window.print()">Print Resume</button>
+  </div>
+
+  <!-- Resume Page Container -->
+  <div class="resume-page">
+    <header>
+      <h1>Pavithra Rendla</h1>
+      <div class="contact-info">
+        <span>+91 9995990160</span>
+        <span>|</span>
+        <span><a href="mailto:rendlapavithra@gmail.com">rendlapavithra@gmail.com</a></span>
+        <span>|</span>
+        <span><a href="https://linkedin.com/in/pavithrarendla" target="_blank">linkedin.com/in/pavithrarendla</a></span>
+        <span>|</span>
+        <span><a href="https://github.com/pavithrarendla" target="_blank">github.com/pavithrarendla</a></span>
+      </div>
+    </header>
+
+    <!-- SECTION: EDUCATION -->
+    <div class="section">
+      <h2 class="section-title">Education</h2>
+      
+      <!-- B.Tech -->
+      <div>
+        <div class="item-header">
+          <div class="item-title">K L University</div>
+          <div class="item-date-loc">Guntur, AP</div>
+        </div>
+        <div class="item-header" style="margin-top: -2px;">
+          <div class="item-subtitle-tech">Bachelor of Technology in Computer Science and Engineering - <strong>9.7 CGPA</strong></div>
+          <div class="item-date-loc" style="font-style: italic;">Aug 2023 - May 2027</div>
+        </div>
+      </div>
+
+      <!-- Intermediate -->
+      <div style="margin-top: 6px;">
+        <div class="item-header">
+          <div class="item-title">Sri Chaitanya College</div>
+          <div class="item-date-loc">Vijayawada, AP</div>
+        </div>
+        <div class="item-header" style="margin-top: -2px;">
+          <div class="item-subtitle-tech">Intermediate - <strong>96%</strong></div>
+          <div class="item-date-loc" style="font-style: italic;">2021 - 2023</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION: PROJECTS -->
+    <div class="section">
+      <h2 class="section-title">Projects</h2>
+      
+      <!-- Project 1 -->
+      <div>
+        <div class="item-header">
+          <div class="item-title">Employee Finance Management System <span style="font-weight: normal; font-size: 11.5px; font-style: italic;">| Python, Django, MySQL</span></div>
+          <div class="item-date-loc">July 2024 - December 2024</div>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed a scalable online platform for employees to track and manage their salaries, ensuring a 30 percent increase in financial planning efficiency.</li>
+          <li>Implementing the back end using MySQL to manage their salary according to their goals.</li>
+        </ul>
+      </div>
+
+      <!-- Project 2 -->
+      <div>
+        <div class="item-header">
+          <div class="item-title">Pet Adoption Application <span style="font-weight: normal; font-size: 11.5px; font-style: italic;">| Fullstack, React.js, MySQL</span></div>
+          <div class="item-date-loc">January 2025 - Present</div>
+        </div>
+        <ul class="bullet-list">
+          <li>Developing a pet adoption application using full stack to streamline the the pet adoption process.</li>
+          <li>Integrating MySQL to store and manage user data, pet details and adoption information.</li>
+          <li>Designing the database schema in MySQL for managing users.</li>
+        </ul>
+      </div>
+
+      <!-- Project 3 -->
+      <div>
+        <div class="item-header">
+          <div class="item-title">Travel Booking System <span style="font-weight: normal; font-size: 11.5px; font-style: italic;">| mern stack, React.js, MySQL</span></div>
+          <div class="item-date-loc">January 2025 - Present</div>
+        </div>
+        <ul class="bullet-list">
+          <li>Developing a website for the users to make their journey plans in an effective way.</li>
+          <li>Designing the database schema in MySQL for managing users.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SECTION: TECHNICAL SKILLS -->
+    <div class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-list">
+        <strong>Languages:</strong> C/C++, JavaScript, Python, HTML/CSS<br>
+        <strong>Web Development:</strong> React.js, Node.js, Spring, Spring Boot, Hibernate<br>
+        <strong>Databases:</strong> PostgreSQL, MySQL<br>
+        <strong>Developer Tools:</strong> Git, GitHub, Eclipse, VS Code<br>
+        <strong>Relevant Courses Work:</strong> OOPS, Operating Systems, Data Structures, Data Base Management Systems<br>
+        <strong>Soft Skills:</strong> Problem Solving, Public Speaker, Analytical Thinking, Team Work, Smart work, Leadership, Flexibility, Adaptability, Communication Skills, Quick Learning, Ability.
+      </div>
+    </div>
+
+    <!-- SECTION: CERTIFICATIONS -->
+    <div class="section">
+      <h2 class="section-title">Certifications</h2>
+      
+      <!-- Cert 1 -->
+      <div class="cert-row">
+        <div>
+          <span class="cert-name">AWS Certified Cloud Practitioner</span>
+          <span class="cert-issuer"> - Amazon Web Services(AWS)</span>
+        </div>
+        <div><a href="#" class="cert-link">Verify Credentials</a></div>
+      </div>
+
+      <!-- Cert 2 -->
+      <div class="cert-row">
+        <div>
+          <span class="cert-name">AICTE INTERNSHIP</span>
+          <span class="cert-issuer"> - Zero Trust Cloud Security Virtual Internship</span>
+        </div>
+        <div><a href="#" class="cert-link">Verify Credentials</a></div>
+      </div>
+
+      <!-- Cert 3 -->
+      <div class="cert-row">
+        <div>
+          <span class="cert-name">Lingua Skills Certified</span>
+          <span class="cert-issuer"> - University of Cambridge</span>
+        </div>
+        <div><a href="#" class="cert-link">Verify Credentials</a></div>
+      </div>
+    </div>
+
+    <!-- SECTION: LEADERSHIP AND EXTRACURRICULAR ACTIVITIES -->
+    <div class="section">
+      <h2 class="section-title">Leadership and Extracurricular Activities</h2>
+      
+      <!-- Activity 1 -->
+      <div class="extra-item">
+        <span class="extra-title">Club Lead-Technical Club,KL University Student Activity Center</span>
+        <div class="extra-desc">Led a technical club, focusing on technical content within the university community.</div>
+      </div>
+
+      <!-- Activity 2 -->
+      <div class="extra-item">
+        <span class="extra-title">Merit scholar-KL University</span>
+        <div class="extra-desc">Got an concession of 4.5 lakhs in the university for outstanding performance throughout intermediate.</div>
+      </div>
+
+      <!-- Activity 3 -->
+      <div class="extra-item">
+        <span class="extra-title">Social Profile</span>
+        <div class="extra-desc">Participated in events conducted by Smart Village Revolution Club,KL University.</div>
+      </div>
+    </div>
+
+    <!-- SECTION: CODING PLATFORMS -->
+    <div class="section">
+      <h2 class="section-title">Coding Platforms</h2>
+      <div class="platforms-row">
+        <div class="platform-item">
+          <strong>code chef</strong>
+        </div>
+        <div class="platform-item">
+          <strong>hacker rank</strong>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
