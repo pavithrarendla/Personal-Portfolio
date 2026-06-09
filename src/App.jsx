@@ -591,7 +591,7 @@ function App() {
           
           <div className="grid-4">
             {/* Cert 1 */}
-            <div className="cert-card">
+            <a href="https://www.credly.com/badges/fcb1ee59-28bd-4b4b-8e0a-eb68fa5f0bf3/public_url" target="_blank" rel="noopener noreferrer" className="cert-card">
               <div className="cert-icon-box">
                 <Award />
               </div>
@@ -599,10 +599,10 @@ function App() {
                 <h4 className="cert-name">AWS Certified Cloud Practitioner</h4>
                 <span className="cert-issuer">Amazon Web Services</span>
               </div>
-            </div>
+            </a>
 
             {/* Cert 2 */}
-            <div className="cert-card">
+            <a href="https://www.credly.com/badges/4f423290-529f-4b13-a449-d11d95e1b993/public_url" target="_blank" rel="noopener noreferrer" className="cert-card">
               <div className="cert-icon-box">
                 <Award />
               </div>
@@ -610,10 +610,10 @@ function App() {
                 <h4 className="cert-name">MongoDB Certified Developer</h4>
                 <span className="cert-issuer">MongoDB Inc</span>
               </div>
-            </div>
+            </a>
 
             {/* Cert 3 */}
-            <div className="cert-card">
+            <a href="https://www.credly.com/badges/ee0bc189-f1ef-4046-8228-5671073f1c39/public_url" target="_blank" rel="noopener noreferrer" className="cert-card">
               <div className="cert-icon-box">
                 <Award />
               </div>
@@ -621,7 +621,7 @@ function App() {
                 <h4 className="cert-name">Microsoft Azure (AZ-900)</h4>
                 <span className="cert-issuer">Microsoft</span>
               </div>
-            </div>
+            </a>
 
             {/* Cert 4 */}
             <div className="cert-card">
@@ -646,7 +646,7 @@ function App() {
             </div>
 
             {/* Cert 6 */}
-            <div className="cert-card">
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7305616681974861824/" target="_blank" rel="noopener noreferrer" className="cert-card">
               <div className="cert-icon-box">
                 <Award />
               </div>
@@ -654,10 +654,10 @@ function App() {
                 <h4 className="cert-name">Automation Anywhere RPA</h4>
                 <span className="cert-issuer">Automation Anywhere</span>
               </div>
-            </div>
+            </a>
 
             {/* Cert 7 */}
-            <div className="cert-card">
+            <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=6548A550C245061D370EC41B561B45215F1A534C7F441A996F53EE2C2813F0FF" target="_blank" rel="noopener noreferrer" className="cert-card">
               <div className="cert-icon-box">
                 <Award />
               </div>
@@ -665,7 +665,7 @@ function App() {
                 <h4 className="cert-name">Java Programmer Certification</h4>
                 <span className="cert-issuer">Oracle</span>
               </div>
-            </div>
+            </a>
 
             {/* Cert 8 */}
             <div className="cert-card">
@@ -708,7 +708,7 @@ function App() {
 
             {/* Codechef */}
             <a 
-              href="https://codechef.com" 
+              href="https://www.codechef.com/users/klu_2300090355" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="platform-card platform-card-codechef"
