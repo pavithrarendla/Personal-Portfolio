@@ -402,6 +402,103 @@ function App() {
               </div>
             </div>
           </div>
+          {/* Interactive Skills Dashboard (Doughnut & Radar) */}
+          <div className="skills-dashboard animate-fade-in">
+            {/* Left Card: Skills Distribution Doughnut */}
+            <div className="dashboard-card">
+              <h3 className="dashboard-card-title">Skill Pillars</h3>
+              <p className="dashboard-card-subtitle">General distribution of core tech domains</p>
+              
+              <div className="chart-wrapper">
+                <div className="doughnut-layout">
+                  <div className="doughnut-chart-box">
+                    <svg viewBox="0 0 200 200" width="160" height="160">
+                      {/* Gray background track */}
+                      <circle cx="100" cy="100" r="70" fill="transparent" stroke="var(--border-color)" strokeWidth="14" />
+                      
+                      {/* Segments (circumference is 439.82) */}
+                      {/* Segment 1: Java & Backend (45%) -> strokeDasharray="197.9 439.82" offset="0" */}
+                      <circle cx="100" cy="100" r="70" fill="transparent" stroke="#3b82f6" strokeWidth="14"
+                              strokeDasharray="197.9 439.82" strokeDashoffset="0" transform="rotate(-90 100 100)" strokeLinecap="round" />
+                      
+                      {/* Segment 2: Cloud & DevOps (35%) -> strokeDasharray="153.9 439.82" offset="-197.9" */}
+                      <circle cx="100" cy="100" r="70" fill="transparent" stroke="#10b981" strokeWidth="14"
+                              strokeDasharray="153.9 439.82" strokeDashoffset="-197.9" transform="rotate(-90 100 100)" strokeLinecap="round" />
+                      
+                      {/* Segment 3: Frontend & DBs (20%) -> strokeDasharray="88.0 439.82" offset="-351.8" */}
+                      <circle cx="100" cy="100" r="70" fill="transparent" stroke="#a855f7" strokeWidth="14"
+                              strokeDasharray="88.0 439.82" strokeDashoffset="-351.8" transform="rotate(-90 100 100)" strokeLinecap="round" />
+                    </svg>
+                    <div className="doughnut-center-text">
+                      <span className="doughnut-number">12</span>
+                      <span className="doughnut-label">Tech Tools</span>
+                    </div>
+                  </div>
+                  
+                  <div className="doughnut-legend">
+                    <div className="doughnut-legend-item">
+                      <span className="doughnut-legend-dot" style={{ backgroundColor: '#3b82f6' }}></span>
+                      <span className="doughnut-legend-name">Backend</span>
+                      <span className="doughnut-legend-val">45%</span>
+                    </div>
+                    <div className="doughnut-legend-item">
+                      <span className="doughnut-legend-dot" style={{ backgroundColor: '#10b981' }}></span>
+                      <span className="doughnut-legend-name">Cloud/DevOps</span>
+                      <span className="doughnut-legend-val">35%</span>
+                    </div>
+                    <div className="doughnut-legend-item">
+                      <span className="doughnut-legend-dot" style={{ backgroundColor: '#a855f7' }}></span>
+                      <span className="doughnut-legend-name">Frontend/DBs</span>
+                      <span className="doughnut-legend-val">20%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right Card: Proficiency Map Radar */}
+            <div className="dashboard-card">
+              <h3 className="dashboard-card-title">Proficiency Map</h3>
+              <p className="dashboard-card-subtitle">Multi-dimensional rating across core capabilities</p>
+              
+              <div className="chart-wrapper">
+                <svg className="radar-chart-box" viewBox="0 0 300 280">
+                  {/* Concentric grid hexagons */}
+                  <polygon className="radar-grid-line" points="150,118.75 168.4,129.4 168.4,150.6 150,161.25 131.6,150.6 131.6,129.4" />
+                  <polygon className="radar-grid-line" points="150,97.5 186.8,118.75 186.8,161.25 150,182.5 113.2,161.25 113.2,118.75" />
+                  <polygon className="radar-grid-line" points="150,76.25 205.2,108.1 205.2,171.9 150,203.75 94.8,171.9 94.8,108.1" />
+                  <polygon className="radar-grid-line" points="150,55 223.6,97.5 223.6,182.5 150,225 76.4,182.5 76.4,97.5" />
+                  
+                  {/* Axes lines */}
+                  <line className="radar-axis-line" x1="150" y1="140" x2="150" y2="55" />
+                  <line className="radar-axis-line" x1="150" y1="140" x2="223.6" y2="97.5" />
+                  <line className="radar-axis-line" x1="150" y1="140" x2="223.6" y2="182.5" />
+                  <line className="radar-axis-line" x1="150" y1="140" x2="150" y2="225" />
+                  <line className="radar-axis-line" x1="150" y1="140" x2="76.4" y2="182.5" />
+                  <line className="radar-axis-line" x1="150" y1="140" x2="76.4" y2="97.5" />
+                  
+                  {/* Radar shape */}
+                  <polygon className="radar-poly-fill" points="150,63.5 212.6,103.9 208.9,174 150,212.3 94.8,171.9 87.4,103.9" />
+                  
+                  {/* Radar points */}
+                  <circle className="radar-point-node" cx="150" cy="63.5" />
+                  <circle className="radar-point-node" cx="212.6" cy="103.9" />
+                  <circle className="radar-point-node" cx="208.9" cy="174" />
+                  <circle className="radar-point-node" cx="150" cy="212.3" />
+                  <circle className="radar-point-node" cx="94.8" cy="171.9" />
+                  <circle className="radar-point-node" cx="87.4" cy="103.9" />
+                  
+                  {/* Labels */}
+                  <text className="radar-axis-text" x="150" y="40" textAnchor="middle">Java & OOPs</text>
+                  <text className="radar-axis-text" x="235" y="96" textAnchor="start">Cloud (AWS)</text>
+                  <text className="radar-axis-text" x="235" y="186" textAnchor="start">Databases</text>
+                  <text className="radar-axis-text" x="150" y="244" textAnchor="middle">Frontend</text>
+                  <text className="radar-axis-text" x="65" y="186" textAnchor="end">DevOps</text>
+                  <text className="radar-axis-text" x="65" y="96" textAnchor="end">Spring Boot</text>
+                </svg>
+              </div>
+            </div>
+          </div>
           
           <div className="grid-3">
             {/* Category 1: Cloud & DevOps */}

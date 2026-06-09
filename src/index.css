@@ -738,6 +738,207 @@ body {
   color: var(--text-muted);
 }
 
+/* Interactive Skills Dashboard (Doughnut & Radar) */
+.skills-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+@media (max-width: 992px) {
+  .skills-dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard-card {
+  position: relative;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--border-card-hover);
+}
+
+.dashboard-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+}
+
+.dashboard-card-title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.dashboard-card-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.chart-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  min-height: 220px;
+}
+
+/* Doughnut styles */
+.doughnut-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .doughnut-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.doughnut-chart-box {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+.doughnut-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doughnut-number {
+  font-family: var(--font-heading);
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--text-heading);
+  line-height: 1;
+}
+
+.doughnut-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.doughnut-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.doughnut-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.doughnut-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.doughnut-legend-name {
+  color: var(--text-heading);
+  margin-right: auto;
+}
+
+.doughnut-legend-val {
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Radar styles */
+.radar-chart-box {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
+
+.radar-grid-line {
+  stroke: var(--border-color);
+  stroke-width: 1;
+  fill: none;
+}
+
+.radar-axis-line {
+  stroke: var(--border-color);
+  stroke-width: 1;
+  stroke-dasharray: 2 2;
+}
+
+.radar-poly-fill {
+  fill: rgba(59, 130, 246, 0.2);
+  stroke: var(--accent-color);
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.6));
+  transition: all 0.3s ease;
+}
+
+.radar-poly-fill:hover {
+  fill: rgba(59, 130, 246, 0.35);
+  stroke-width: 3.5;
+}
+
+.radar-axis-text {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  fill: var(--text-heading);
+}
+
+.radar-point-node {
+  fill: var(--accent-color);
+  stroke: var(--bg-card);
+  stroke-width: 1.5;
+  r: 4px;
+}
+
 /* Projects Section Styles */
 .project-card {
   background-color: var(--bg-card);
