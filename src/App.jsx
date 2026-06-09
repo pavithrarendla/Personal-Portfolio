@@ -34,6 +34,7 @@ function App() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formError, setFormError] = useState('');
+  const [isSending, setIsSending] = useState(false);
 
   // Refs for each section to implement smooth scrolling and scroll spy
   const homeRef = useRef(null);
@@ -112,13 +113,36 @@ function App() {
       return;
     }
     setFormError('');
-    setFormSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => {
-      setFormSubmitted(false);
-    }, 5000);
+    setIsSending(true);
+
+    fetch("https://formsubmit.co/ajax/rendlapavithra@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        _subject: `New Portfolio Message from ${formData.name}`,
+        _captcha: "false"
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      setIsSending(false);
+      if (data.success === "true" || data.success === true) {
+        setFormSubmitted(true);
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setFormError('Something went wrong. Please try again.');
+      }
+    })
+    .catch(error => {
+      setIsSending(false);
+      setFormError('Connection error. Please try again.');
+    });
   };
 
   return (
@@ -834,8 +858,8 @@ function App() {
                     </span>
                   )}
                   
-                  <button type="submit" className="btn-contact-submit">
-                    Send Message
+                  <button type="submit" className="btn-contact-submit" disabled={isSending}>
+                    {isSending ? "Sending..." : "Send Message"}
                   </button>
                 </form>
               )}
