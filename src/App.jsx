@@ -348,60 +348,7 @@ function App() {
             <h2>Skills & Technologies</h2>
           </div>
           
-          {/* GitHub-style Languages Card */}
-          <div className="github-skills-card animate-fade-in">
-            <div className="github-card-header">
-              <div className="github-card-title-box">
-                <svg className="github-repo-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
-                  <path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8z"></path>
-                </svg>
-                <span className="github-repo-name">pavithrarendla / skills-distribution</span>
-              </div>
-              <span className="github-public-badge">Public</span>
-            </div>
-            
-            <div className="github-languages-bar">
-              <div className="lang-segment" style={{ width: '35.5%', backgroundColor: '#b07219' }} title="Java: 35.5%"></div>
-              <div className="lang-segment" style={{ width: '25.0%', backgroundColor: '#f1e05a' }} title="JavaScript & React: 25.0%"></div>
-              <div className="lang-segment" style={{ width: '15.0%', backgroundColor: '#6db33f' }} title="Spring Boot: 15.0%"></div>
-              <div className="lang-segment" style={{ width: '12.5%', backgroundColor: '#ff9900' }} title="AWS & Cloud: 12.5%"></div>
-              <div className="lang-segment" style={{ width: '7.0%', backgroundColor: '#e38c00' }} title="SQL & Databases: 7.0%"></div>
-              <div className="lang-segment" style={{ width: '5.0%', backgroundColor: 'var(--text-muted)' }} title="DevOps & Tools: 5.0%"></div>
-            </div>
-            
-            <div className="github-languages-legend">
-              <div className="legend-item">
-                <span className="legend-dot" style={{ backgroundColor: '#b07219' }}></span>
-                <span className="legend-name">Java</span>
-                <span className="legend-percent">35.5%</span>
-              </div>
-              <div className="legend-item">
-                <span className="legend-dot" style={{ backgroundColor: '#f1e05a' }}></span>
-                <span className="legend-name">JavaScript & React</span>
-                <span className="legend-percent">25.0%</span>
-              </div>
-              <div className="legend-item">
-                <span className="legend-dot" style={{ backgroundColor: '#6db33f' }}></span>
-                <span className="legend-name">Spring Boot</span>
-                <span className="legend-percent">15.0%</span>
-              </div>
-              <div className="legend-item">
-                <span className="legend-dot" style={{ backgroundColor: '#ff9900' }}></span>
-                <span className="legend-name">AWS & Cloud</span>
-                <span className="legend-percent">12.5%</span>
-              </div>
-              <div className="legend-item">
-                <span className="legend-dot" style={{ backgroundColor: '#e38c00' }}></span>
-                <span className="legend-name">SQL & Databases</span>
-                <span className="legend-percent">7.0%</span>
-              </div>
-              <div className="legend-item">
-                <span className="legend-dot" style={{ backgroundColor: 'var(--text-muted)' }}></span>
-                <span className="legend-name">DevOps & Tools</span>
-                <span className="legend-percent">5.0%</span>
-              </div>
-            </div>
-          </div>
+
           {/* Interactive Skills Dashboard (Radar) */}
           <div className="skills-dashboard animate-fade-in" style={{ display: 'flex', justifyContent: 'center' }}>
             {/* Right Card: Proficiency Map Radar */}
