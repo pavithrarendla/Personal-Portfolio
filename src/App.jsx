@@ -271,7 +271,7 @@ function App() {
               </div>
               <div className="stat-item">
                 <div className="stat-number">Active</div>
-                <div className="stat-label">CodeChef & HackerRank</div>
+                <div className="stat-label">CodeChef</div>
               </div>
             </div>
 
@@ -685,32 +685,14 @@ function App() {
           <div className="section-header">
             <h2>Coding Profiles</h2>
           </div>
-          
-          <div className="platform-grid">
-            {/* Leetcode */}
-            <a 
-              href="https://leetcode.com/u/pavithrarendla/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="platform-card platform-card-leetcode"
-            >
-              <div className="platform-left">
-                <span className="platform-badge">LeetCode</span>
-                <span className="platform-name">LeetCode Profile</span>
-                <span className="platform-meta">Competitive programming & data structures</span>
-              </div>
-              <div className="platform-right">
-                <span className="platform-stat-number">300+</span>
-                <span className="platform-stat-label">Problems Solved</span>
-              </div>
-            </a>
-
+          <div className="platform-grid" style={{ display: 'flex', justifyContent: 'center' }}>
             {/* Codechef */}
             <a 
               href="https://www.codechef.com/users/klu_2300090355" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="platform-card platform-card-codechef"
+              style={{ width: '100%', maxWidth: '500px' }}
             >
               <div className="platform-left">
                 <span className="platform-badge">CodeChef</span>
